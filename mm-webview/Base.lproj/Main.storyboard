@@ -41,9 +41,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuF-p3-QaJ">
                                         <rect key="frame" x="251" y="20" width="61" height="60"/>
                                         <state key="normal" title="X"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                        </variation>
                                         <connections>
                                             <action selector="onStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SWp-GH-fS9"/>
                                         </connections>
@@ -51,9 +48,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2H-xk-2sj">
                                         <rect key="frame" x="20" y="20" width="61" height="60"/>
                                         <state key="normal" title="&lt;"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="100" y="0.0" width="100" height="30"/>
-                                        </variation>
                                         <connections>
                                             <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87v-9s-Fyw"/>
                                         </connections>
@@ -61,19 +55,20 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-wN-xHp">
                                         <rect key="frame" x="359" y="20" width="61" height="60"/>
                                         <state key="normal" title="R"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="200" y="0.0" width="100" height="30"/>
-                                        </variation>
                                         <connections>
                                             <action selector="onReloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTk-xs-3uQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLN-YM-FmX">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="onPlusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgL-Zt-A27"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-Id-gzf">
                                         <rect key="frame" x="127" y="20" width="61" height="60"/>
                                         <state key="normal" title="&gt;"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="300" y="0.0" width="100" height="30"/>
-                                        </variation>
                                         <connections>
                                             <action selector="onForwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Aa-i6-th3"/>
                                         </connections>

@@ -86,6 +86,27 @@
     return YES;
 }
 
+- (IBAction)onPlusButtonPressed:(UIButton *)sender {
+    {
+        [self.spinner stopAnimating];
+        
+        
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"Coming Soon"
+                                            message:@"New Feature"
+                                     preferredStyle:UIAlertControllerStyleAlert
+         ];
+
+        UIAlertAction *cancelButton =
+        [UIAlertAction actionWithTitle:@"Cancel"
+                                 style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * _Nonnull action) {}
+         ];
+        
+        [alert addAction:cancelButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
 
 #pragma mark -
 #pragma mark utility
