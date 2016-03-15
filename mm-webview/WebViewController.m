@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
 
 @end
 
@@ -25,7 +27,6 @@
     [self loadURL:@"http://www.mobilemakers.co"];
 }
 
-
 #pragma mark -
 #pragma mark UIWebView delegates
 
@@ -35,9 +36,14 @@
     [self.spinner startAnimating];
 }
 
+
 - (void) webViewDidFinishLoad:(UIWebView *)webView
 {
+    
     [self.spinner stopAnimating];
+    [self.backButton setEnabled:[self.webView canGoBack]];
+    [self.forwardButton setEnabled:[self.webView canGoForward]];
+    
 }
 
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -87,9 +93,30 @@
 
 - (void) loadURL:(NSString *)urlString
 {
+    if (! [urlString containsString:@"http"])
+    {
+        urlString = [NSString stringWithFormat:@"%@%@%", @"http://", urlString];
+    }
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *urlReq = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlReq];
+}
+
+- (IBAction)onBackButtonPressed:(UIButton *)sender
+{
+    [self.webView goBack];
+}
+- (IBAction)onForwardButtonPressed:(UIButton *)sender
+{
+    [self.webView goForward];
+}
+- (IBAction)onStopButtonPressed:(UIButton *)sender {
+    [self.webView stopLoading];
+    [self.spinner stopAnimating];
+}
+- (IBAction)onReloadButtonPressed:(UIButton *)sender {
+    [self.webView reload];
+    
 }
 
 
