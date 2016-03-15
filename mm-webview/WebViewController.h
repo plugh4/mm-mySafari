@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebViewController.h
 //  mm-webview
 //
 //  Created by Christopher Serra on 3/15/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface WebViewController : UIViewController
 
 @end
-
